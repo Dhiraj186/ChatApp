@@ -148,7 +148,7 @@
                 }
             });
         console.log('newpage')
-        fetch('http://127.0.0.1:8081/getMessages/', {
+        fetch('http://' +  window.location.host + '/getMessages/', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
@@ -188,7 +188,7 @@
             })
             if (localStorage.getItem('time')){
                 let intervalID = setInterval(async () => {
-                    const res = await fetch(`http://127.0.0.1:8081/getSessionMessages/`,
+                    const res = await fetch('http://' + window.location.host + '/getSessionMessages/',
                     {
                     method: "POST",
                     body: JSON.stringify({
@@ -255,7 +255,7 @@
                 message: messageInput,
                 timeStamp: time
                 });
-            fetch("http://127.0.0.1:8081/sendMessage/",
+            fetch('http://' +  window.location.host + '/sendMessage/',
             {
                 method: "POST",
                 body: JSON.stringify({

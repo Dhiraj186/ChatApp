@@ -155,7 +155,7 @@
         
         console.log('hi')
         var users = []
-        fetch('http://127.0.0.1:8081/getUsers/')
+        fetch('http://' +  window.location.host + '/getUsers/')
         .then(response => {
             if (response.ok) {
             return response.json(); // Parse the response data as JSON
@@ -176,7 +176,7 @@
             // }
             document.querySelector('.allUsers').addEventListener('click', function(e) {
                 console.log(e.target);
-                fetch('http://127.0.0.1:8081/getChatPage/', {
+                fetch('http://' +  window.location.host + '/getChatPage/', {
                     method: 'POST',
                     body: JSON.stringify({ username: e.target.innerText.charAt(0).toLowerCase() + e.target.innerText.slice(1) }),
                     headers: {
