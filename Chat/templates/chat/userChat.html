@@ -151,8 +151,7 @@
         fetch('http://' +  window.location.host + '/getMessages/', {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': '{{ csrf_token }}'
+            'Content-Type': 'application/json'
             },
             body: JSON.stringify({
             toUserId: "{{to_userId}}"
@@ -196,8 +195,7 @@
                     toUserId: "{{to_userId}}",
                     }),
                     headers: {
-                    "Content-type": "application/json",
-                    "X-CSRFToken": "{{ csrf_token }}",
+                    "Content-type": "application/json"
                     },
                 })
                 .then((response) => response.json())
@@ -264,8 +262,7 @@
                 toUser: "{{to_userId}}",
                 }),
                 headers: {
-                "Content-type": "application/json",
-                "X-CSRFToken": "{{ csrf_token }}",
+                "Content-type": "application/json"
                 },
             })
                 .then((response) => response.json())

@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-zldefxqbg14n-(!ziklvh_rn5c8f)h^rjk6_l=q##8nyy)yq7x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dhirajjj.pythonanywhere.com']
-
+ALLOWED_HOSTS = ['*']
+# 'http://dhirajjj.pythonanywhere.com', 'https://dhirajjj.pythonanywhere.com', 'dhirajjj.pythonanywhere.com'
 
 # Application definition
 
@@ -41,11 +41,11 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ORIGIN_WHITELIST = (
-       'dhirajjj.pythonanywhere.com',
-)
+# CORS_ORIGIN_WHITELIST = (
+#        'http://dhirajjj.pythonanywhere.com',
+# )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
